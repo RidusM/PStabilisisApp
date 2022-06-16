@@ -5,19 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PStabilisisApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="921">
-    <Grid>
+        Title="MainWindow" Height="435" Width="738">
+    <Grid Margin="0,0,0,-6" HorizontalAlignment="Left" Width="743">
         <Button Content="GET" HorizontalAlignment="Left" Margin="10,293,0,0" VerticalAlignment="Top" Height="47" Width="102" Click="Button_Click"/>
-        <Button Content="PATCH" HorizontalAlignment="Left" Margin="400,293,0,0" VerticalAlignment="Top" Height="47" Width="102" Click="bntPatch_Click"/>
-        <Button Content="DELETE" HorizontalAlignment="Left" Margin="600,293,0,0" VerticalAlignment="Top" Height="47" Width="102" Click="btnDelete_Click"/>
-        <Button Content="PUT" HorizontalAlignment="Left" Margin="809,293,0,0" VerticalAlignment="Top" Height="47" Width="102" Click="btnAdd_Click"/>
+        <Button Content="PATCH" HorizontalAlignment="Left" Margin="200,293,0,0" VerticalAlignment="Top" Height="47" Width="102" Click="bntPatch_Click"/>
+        <Button Content="DELETE" HorizontalAlignment="Left" Margin="400,293,0,0" VerticalAlignment="Top" Height="47" Width="102" Click="btnDelete_Click"/>
+        <Button Content="PUT" HorizontalAlignment="Left" Margin="600,293,0,0" VerticalAlignment="Top" Height="47" Width="102" Click="btnAdd_Click"/>
+        <Button Content="GET MARSH" HorizontalAlignment="Left" Margin="304,360,0,0" VerticalAlignment="Top" Height="47" Width="102" Click="Button_Click_1"/>
         <TextBox x:Name="Title" Style="{StaticResource placeHolder}" Tag="Title" HorizontalAlignment="Left" Margin="10,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
-        <TextBox x:Name="Location" Style="{StaticResource placeHolder}" Tag="Location" HorizontalAlignment="Left" Margin="10,96,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="Latitude" Style="{StaticResource placeHolder}" Tag="Latitude" HorizontalAlignment="Left" Margin="10,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Location" Style="{StaticResource placeHolder}" Tag="Location" HorizontalAlignment="Left" Margin="10,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Latitude" Style="{StaticResource placeHolder}" Tag="Latitude" HorizontalAlignment="Left" Margin="10,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="Longitude" Style="{StaticResource placeHolder}" Tag="Longitude" HorizontalAlignment="Left" Margin="10,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="Oldtitle" Style="{StaticResource placeHolder}" Tag="Oldtitle" HorizontalAlignment="Left" Margin="10,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Oldtitle" Style="{StaticResource placeHolder}" Tag="Oldtitle" HorizontalAlignment="Left" Margin="10,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="Newtitle" Style="{StaticResource placeHolder}" Tag="Newtitle" HorizontalAlignment="Left" Margin="10,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Grid/>
-        <DataGrid x:Name="Info" Margin="173,10,152,190"/>
+        <TextBox x:Name="Capacity" Style="{StaticResource placeHolder}" Tag="Capacity" HorizontalAlignment="Left" Margin="10,233,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Grid HorizontalAlignment="Center" Width="473" Margin="0,0,0,10"/>
+        <DataGrid x:Name="Info" Margin="135,10,0,190" HorizontalAlignment="Left" Width="596"/>
     </Grid>
 </Window>

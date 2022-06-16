@@ -4,6 +4,7 @@ using System.Net;
 using Newtonsoft.Json;
 using System.IO;
 using Newtonsoft.Json.Linq;
+using System.Diagnostics;
 
 namespace PStabilisisApp
 {
@@ -18,6 +19,7 @@ namespace PStabilisisApp
         public string latitude;
         public string longitude;
         public string oldtitle;
+        public string capacity;
 
         public MainWindow()
         {
@@ -62,7 +64,8 @@ namespace PStabilisisApp
             location = Location.Text;
             latitude = Latitude.Text;
             longitude = Longitude.Text;
-            var url = $"http://127.0.0.1:8000/objects/?title={title}&location={location}&latitude={latitude}&longitude={longitude}";
+            capacity = Capacity.Text;
+            var url = $"http://127.0.0.1:8000/objects/?title={title}&location={location}&latitude={latitude}&longitude={longitude}&capacity={capacity}";
 
             var request = WebRequest.Create(url);
             request.Method = "POST";
@@ -95,6 +98,12 @@ namespace PStabilisisApp
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            string url = File.ReadAllText(@"C:\\Users\\Admin\\PycharmProjects\\FastApiWebServicePractice\\itog.txt");
+            Process.Start("explorer.exe", $"{url}");
         }
     }
 }
